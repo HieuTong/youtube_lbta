@@ -21,7 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
         let layout = UICollectionViewFlowLayout()
-        window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout)) 
+        window?.rootViewController = UINavigationController(rootViewController: HomeController(collectionViewLayout: layout))
+        
+        
+        let statusBarBackgroundView = UIView()
+        statusBarBackgroundView.backgroundColor = UIColor.rgb(r: 194, g: 31, b: 31)
+        window?.addSubview(statusBarBackgroundView)
+        window?.addConstraintsWithFormat(format: "H:[v0]", views: statusBarBackgroundView)
+        window?.addConstraintsWithFormat(format: "V:[v0(20)]", views: statusBarBackgroundView)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
