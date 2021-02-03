@@ -22,6 +22,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         collectionView.backgroundColor = .white
         collectionView.register(VideoCell.self, forCellWithReuseIdentifier: VideoCell.ID)
+        collectionView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+        collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
+
         // Do any additional setup after loading the view.
         
         setupMenuBar()
